@@ -18,9 +18,12 @@ def get_first_and_last_element(lst: list) -> list:
     
     # TODO: Напишите ваш код здесь. 
     # Возьмите первый и последний элемент из `lst` и положите их в `result`.
+    if lst:  
+        result.append(lst[0])
+        result.append(lst[-1])
     
-    # Этот код возвращает результат для проверки. Не меняйте его.
     return result
+
 
 def get_middle_elements(lst: list) -> list:
     """
@@ -36,8 +39,10 @@ def get_middle_elements(lst: list) -> list:
     
     # TODO: Напишите ваш код здесь.
     # Используйте срезы, чтобы получить нужные элементы из `lst`.
+    result = lst[1:-1]
     
     return result
+
 
 def get_elements_from_second_to_fourth(lst: list) -> list:
     """
@@ -51,8 +56,10 @@ def get_elements_from_second_to_fourth(lst: list) -> list:
     result = []
     
     # TODO: Напишите ваш код здесь.
+    result = lst[1:4]
     
     return result
+
 
 def add_element_to_start_and_end(lst: list, element) -> list:
     """
@@ -65,10 +72,13 @@ def add_element_to_start_and_end(lst: list, element) -> list:
     Пример: ([1, 2, 3], 0) -> [0, 1, 2, 3, 0]
     """
     
-    # TODO: Напишите ваш код здесь.
+    # TODO: Напишите вашкод здесь.
     # Используйте методы для добавления элементов.
+    lst.insert(0, element)
+    lst.append(element)
     
     return lst
+
 
 def remove_second_element(lst: list) -> list:
     """
@@ -81,5 +91,7 @@ def remove_second_element(lst: list) -> list:
     """
     
     # TODO: Напишите ваш код здесь.
-    
+    if len(lst) > 1:   # sadece en az 2 eleman varsa pop(1) yap
+        lst.pop(1)
     return lst
+
