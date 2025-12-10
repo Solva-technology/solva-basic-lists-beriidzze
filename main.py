@@ -94,3 +94,4 @@ def remove_second_element(lst: list) -> list:
     if len(lst) > 1:   # sadece en az 2 eleman varsa pop(1) yap
         lst.pop(1)
     return lst
+
